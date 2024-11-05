@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Game</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <div id="warning-overlay" class="visible">
+        <div id="warning-message">
+            <p>This is a game with content suitable for everyone.</p> <button id="accept-warning">Enter</button>
+        </div>
+    </div>
+
+    <button id="sound-toggle"><i class="fas fa-volume-up"></i></button>
+    <div class="container">
+        <h1>Spot the Real Headline!</h1>
+        <div id="points" style="font-size:1.5em">Points: 0</div>
+        <div id="timer-container">Time Left: <span id="timer">30</span></div>
+        <div id="news-container"></div>
+        <div id="result-container" style="display: none;">
+            <p id="result-text"></p>
+            <a id="real-news-link" target="_blank" style="display: none;">Read the Real Article</a>
+            <button id="continue-game">Continue</button>
+        </div>
+        <div id="game-over-container" style="display: none;">
+            <h2>Game Over!</h2>
+            <p>You ran out of time.</p>
+            <p>Your final score: <span id="final-score">0</span></p>
+            <button id="play-again">Play Again</button> </div>
+
+        <div id="popup-overlay" class="hidden"></div>
+        <div id="popup" class="hidden">
+            <span id="close-popup">×</span>
+            <p>Wrong! That was fake news. Try again.</p>
+        </div>
+
+    </div>
+
+    <div class="left-tags">
+        <button class="tag" id="credits-button">Credits</button>
+        <button class="tag" id="purpose-button">Purpose</button>
+        <button class="tag" id="trust-button">Trustworthiness</button> <button class="tag" id="tips-button">Tips & Tricks</button>
+    </div>
+      
+    <div id="info-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">×</span> <div id="modal-text"></div>
+        </div>
+    </div>
+    <div class="right-tags">
+        <div class="tag">READ ALL ABOUT IT!</div>
+        <div class="tag">HOT OFF THE PRESS!</div>
+        <div class="tag">DAILY SCOOP</div>
+    </div>
+
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
+
