@@ -1,7 +1,7 @@
 # Headline Quiz
 
 ![image](https://github.com/user-attachments/assets/4f34a7ac-086c-4a44-a7f6-72679be02455)
-
+# (Demo)[https://headlinequiz.jeffrey.hackclub.app/]
 
 ## Description
 Headline Quiz is an interactive web-based game designed to test your ability to distinguish between real and fake news headlines. The game presents a series of headlines, and your task is to identify which ones are real and which ones are fake.
